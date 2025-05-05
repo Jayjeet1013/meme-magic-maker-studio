@@ -1,10 +1,8 @@
 
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="w-full bg-gradient-to-b from-meme-light to-white py-16 md:py-24">
       <div className="container px-4 md:px-6">
@@ -22,9 +20,9 @@ const HeroSection = () => {
             <Button
               size="lg"
               className="bg-meme-primary hover:bg-meme-dark text-white"
-              onClick={() => navigate("/create")}
+              asChild
             >
-              Start Creating
+              <Link to="/create">Start Creating</Link>
             </Button>
             <Button
               variant="outline"
